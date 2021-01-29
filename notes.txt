@@ -1,0 +1,3 @@
+
+
+https://forums.plex.tv/t/pms-stopped-honoring-temporary-directory-setting-now-uses-tmp/594501/69

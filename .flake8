@@ -1,0 +1,116 @@
+########################################################################################################################
+# Copyright (c) 2020 Schweitzer Engineering Laboratories, Inc.
+# SEL Confidential
+########################################################################################################################
+[flake8]
+
+########################################################################################################################
+# Flake8 Base Configuration(s)
+########################################################################################################################
+max-line-length = 120
+
+
+########################################################################################################################
+# Flake8 Plugin Configuration(s)
+########################################################################################################################
+
+# flake8-expression-complexity
+max-expression-complexity = 5
+
+# flake8-import-order
+import-order-style = google
+application-import-names =
+   bq_common,
+   bq_selascii
+
+# flake8-docstring
+docstring-convention = google
+
+
+########################################################################################################################
+# Project-Wide Selected Violations
+#
+# [Axxx]
+# See here:  https://pypi.org/project/flake8-builtins/
+#
+# [Bxxx]
+# See here:  https://github.com/PyCQA/flake8-bugbear
+#
+# [C4xx]
+# See here:  https://pypi.org/project/flake8-comprehensions/
+#
+# [Dxxx]
+# See here:  https://pypi.org/project/flake8-docstrings/
+#            http://www.pydocstyle.org/en/stable/error_codes.html
+#
+# [Exxx,Fxxx,Wxxx,C90]
+# See here:  https://flake8.pycqa.org/en/latest/user/error-codes.html#error-violation-codes
+#
+# [ECExxx]
+# See here:  https://pypi.org/project/flake8-expression-complexity/
+#
+# [Ixxx]
+# See here:  https://github.com/PyCQA/flake8-import-order
+#
+# [ISxxx]
+# See here:  https://pypi.org/project/flake8-import-single/
+#
+# [Rxxx]
+# See here:  https://pypi.org/project/flake8-return/
+#
+# [Txxx]
+# See here:  https://pypi.org/project/flake8-print/
+########################################################################################################################
+select =
+    A,
+    B,
+    C4,
+    C90,
+    D,
+    E,
+    ECE,
+    F,
+    I,
+    IS,
+    R,
+    T,
+    W,
+
+
+########################################################################################################################
+# Project-Wide Ignored Violations
+#
+# [W503]
+# See here:  https://www.flake8rules.com/rules/W503.html
+#            https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator
+#            https://gitlab.com/pycqa/flake8/-/issues/139
+#
+# [B950]
+# See here:  https://github.com/PyCQA/flake8-bugbear#opinionated-warnings
+#
+# [E203]
+# See here:  https://github.com/psf/black/blob/master/docs/the_black_code_style.md#slices
+########################################################################################################################
+ignore =
+   W503,
+   B950,
+   E203,
+
+
+########################################################################################################################
+# Per-File Ignored Violations
+#
+# [F401]
+# See here:  https://flake8.pycqa.org/en/latest/user/error-codes.html#error-violation-codes
+########################################################################################################################
+per-file-ignores =
+    /**/__init__.py:F401,
+    # <YourOtherFileBasedIgnoreGoesHere>
+
+
+########################################################################################################################
+# Project-Wide Excluded Files & Directories
+########################################################################################################################
+exclude =
+    __pycache__,
+    docs
